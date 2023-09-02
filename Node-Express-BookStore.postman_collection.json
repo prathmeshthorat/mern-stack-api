@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "727d3d9e-ba5a-40ec-9d01-2e33f1e2fbf8",
+		"name": "Node-Express-BookStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10100091"
+	},
+	"item": [
+		{
+			"name": "Create Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"author\": \"Unknown\",\r\n    \"country\": \"India/Iran/Iraq/Egypt/Tajikistan\",\r\n    \"imageLink\": \"images/one-thousand-and-one-nights.jpg\",\r\n    \"language\": \"Arabic\",\r\n    \"link\": \"https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights\\n\",\r\n    \"pages\": 288,\r\n    \"title\": \"One Thousand and One Nights\",\r\n    \"publishYear\": 1200\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"_id\": \"64f209804fc4bf3d4e88df4a\",\r\n            \"title\": \"The Epic Of Gilgamesh\",\r\n            \"author\": \"Unknown\",\r\n            \"publishYear\": \"1700\",\r\n            \"createdAt\": \"2023-09-01T15:55:44.481Z\",\r\n            \"updatedAt\": \"2023-09-01T15:55:44.481Z\",\r\n            \"__v\": 0\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/books/64f209804fc4bf3d4e88df4a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"books",
+						"64f209804fc4bf3d4e88df4a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"12 Rules\",\r\n    \"author\": \"Jorden Peterson\",\r\n    \"publishYear\": \"2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get BookById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/books/64f211bded8b5273a939d0ae",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"books",
+						"64f211bded8b5273a939d0ae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete BookById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/books/64f211364fd7e9e83a1e671b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"books",
+						"64f211364fd7e9e83a1e671b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
